@@ -21,6 +21,8 @@ const images = [
       const img = document.createElement('img');
       img.src = image.url;
       img.alt = image.alt;
+      img.width = 550;
+      img.height = 360;
       li.appendChild(img);
       return li;
     };
@@ -28,7 +30,11 @@ const images = [
     const appendGalleryItems = (images) => {
       const galleryItems = images.map(createGalleryItem);
       gallery.append(...galleryItems);
+    
     };
 
-    appendGalleryItems(images);
+  
+
+appendGalleryItems(images);
+  
 
