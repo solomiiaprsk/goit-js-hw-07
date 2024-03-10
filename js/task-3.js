@@ -12,3 +12,5 @@ const nameOutput = document.querySelector('#name-output');
     }
 
     nameInput.addEventListener('input', updateGreeting);
+
+    

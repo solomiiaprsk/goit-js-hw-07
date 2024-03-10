@@ -20,18 +20,21 @@ const controls = document.querySelector('#controls');
     });
 
     function createBoxes(amount) {
-      const initialSize = 30;
+  const initialSize = 30;
 
-      for (let i = 0; i < amount; i++) {
-        const box = document.createElement('div');
-        box.classList.add('box');
-        box.style.width = `${initialSize + i * 10}px`;
-        box.style.height = `${initialSize + i * 10}px`;
-        box.style.backgroundColor = getRandomHexColor();
+  boxesContainer.innerHTML = '';
 
-        boxesContainer.append(box);
-      }
-    }
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.classList.add('box');
+    box.style.width = `${initialSize + i * 10}px`;
+    box.style.height = `${initialSize + i * 10}px`;
+    box.style.backgroundColor = getRandomHexColor();
+
+    boxesContainer.append(box);
+  }
+}
+
 
    function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
